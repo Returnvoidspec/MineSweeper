@@ -10,7 +10,7 @@ public class PrintGrid {
             for(int y = 0;y<height;y++){
                 printed += String.valueOf(grid[x][y]).replace("-1","M")+" |";
             }
-            Log.e("GameEngine",printed);
+            Log.e("",printed);
         }
     }
 }

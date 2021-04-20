@@ -31,7 +31,7 @@ public class SpecialView extends View {
         setBackgroundColor(Color.GRAY);
     }
 
-    @Override
+    /*@Override
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
         int norect = 6;
@@ -51,7 +51,7 @@ public class SpecialView extends View {
             canvas.restore();
         }
 
-    }
+    }*/
 
 
 
