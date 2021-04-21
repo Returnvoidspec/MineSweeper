@@ -31,27 +31,6 @@ public class SpecialView extends View {
         setBackgroundColor(Color.GRAY);
     }
 
-    /*@Override
-    protected void onDraw(Canvas canvas){
-        super.onDraw(canvas);
-        int norect = 6;
-        int contentwidth = getWidth();
-
-        int rectBound = contentwidth/norect;
-
-        rectPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        rectPaint.setColor(0xFF0000FF);
-        square = new Rect(10,10,rectBound - 10,rectBound-10);
-
-        for (int i = 0;i<=3;i++){
-            canvas.save();
-
-            canvas.translate(i*rectBound,0);
-            canvas.drawRect(square,rectPaint);
-            canvas.restore();
-        }
-
-    }*/
 
 
 
