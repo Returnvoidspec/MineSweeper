@@ -7,9 +7,9 @@ public abstract class BaseCell extends View {
 
     private int value;
     private boolean isBomb;
-    private boolean isRevealed;
-    private boolean isClicked;
-    private boolean isFlaged;
+    public boolean isRevealed;
+    public boolean isClicked;
+    public boolean isFlaged;
     private int x,y;
     public int position;
 
@@ -67,8 +67,9 @@ public abstract class BaseCell extends View {
         return isFlaged;
     }
 
-    public void setFlaged(boolean flaged) {
-        isFlaged = flaged;
+    public void setFlaged() {
+
+        this.isFlaged = true;
     }
 
 

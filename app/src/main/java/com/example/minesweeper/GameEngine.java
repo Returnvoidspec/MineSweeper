@@ -26,7 +26,7 @@ public class GameEngine {
         return instance;
     }
 
-    private GameEngine(){ }
+
 
     public void createGrid(Context context){
         Log.e("GameEngine","createGrid is working");
@@ -65,7 +65,7 @@ public class GameEngine {
     public void click(int x,int y) {
         if (onLost == 0)
         {
-            if (x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT && !getCellAt(x, y).isClicked())
+            if (x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT && !getCellAt(x, y).isClicked() && MainActivity.onmark == 0)
             {
                 getCellAt(x, y).setClicked();
 
@@ -82,6 +82,17 @@ public class GameEngine {
                     onGameLost();
                 }
             }
+            else if(x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT && !getCellAt(x, y).isClicked() && MainActivity.onmark == 1){
+                getCellAt(x, y).setClicked();
+                getCellAt(x, y).setFlaged();
+
+            }
+            else if(x >= 0 && y >= 0 && x < WIDTH && y < HEIGHT && getCellAt(x, y).isClicked() && MainActivity.onmark == 1){
+                getCellAt(x, y).setClicked();
+                getCellAt(x, y).isFlaged = false;
+                getCellAt(x, y).isClicked = false;
+            }
+
         }
         checkEnd();
     }

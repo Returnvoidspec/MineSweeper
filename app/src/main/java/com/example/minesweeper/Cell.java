@@ -30,10 +30,13 @@ public class Cell extends BaseCell implements View.OnClickListener {
 
     @Override
     protected void onDraw(Canvas canvas){
+
         super.onDraw(canvas);
 
         drawButton(canvas);
 
+
+        Log.e("", String.valueOf(isFlaged));
         if(isFlaged()){
             drawFlag(canvas);
         }
@@ -42,12 +45,12 @@ public class Cell extends BaseCell implements View.OnClickListener {
         }
         else{
             if(isClicked()){
-                if(getValue() == -1){
+                if (getValue() == -1) {
                     drawBombExploded(canvas);
-                }
-                else{
+                } else {
                     drawNumber(canvas);
                 }
+
             }
             else{
                 drawButton(canvas);
@@ -68,6 +71,9 @@ public class Cell extends BaseCell implements View.OnClickListener {
     }
 
     private void drawFlag(Canvas canvas) {
+        Drawable drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrerjaune);
+        drawable.setBounds(0,0,getWidth(),getHeight());
+        drawable.draw(canvas);
     }
 
     private void drawButton(Canvas canvas){

@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int onmark = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
     public void resetGame(View v){
         GameEngine.onLost = 0;
         GameEngine.getInstance().createGrid(this);
+    }
+
+    public void switchmode(View v){
+        if(onmark == 1){
+            onmark = 0;
+        }
+        else{
+            onmark = 1;
+        }
     }
 
 
