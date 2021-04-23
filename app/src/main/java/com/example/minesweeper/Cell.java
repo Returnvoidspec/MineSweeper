@@ -90,28 +90,28 @@ public class Cell extends BaseCell implements View.OnClickListener {
                 drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
                 break;
             case 1:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number1);
                 break;
             case 2:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number2);
                 break;
             case 3:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number3);
                 break;
             case 4:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number4);
                 break;
             case 5:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number5);
                 break;
             case 6:
                 drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
                 break;
             case 7:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number7);
                 break;
             case 8:
-                drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrergris);
+                drawable = ContextCompat.getDrawable(getContext(),R.drawable.number8);
                 break;
         }
         drawable.setBounds(0,0,getWidth(),getHeight());

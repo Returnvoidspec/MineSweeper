@@ -45,8 +45,10 @@ public abstract class BaseCell extends View {
         return isRevealed;
     }
 
-    public void setRevealed(boolean revealed) {
-        isRevealed = revealed;
+    public void
+    setRevealed() {
+        isRevealed = true;
+        invalidate();
     }
 
     public boolean isClicked() {

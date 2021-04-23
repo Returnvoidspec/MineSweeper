@@ -17,7 +17,7 @@ public class Grid extends GridView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec,int heightMeasureSpec){
-        super.onMeasure(widthMeasureSpec,widthMeasureSpec);
+        super.onMeasure(widthMeasureSpec,heightMeasureSpec);
     }
 
     private class GridAdapter extends BaseAdapter {
