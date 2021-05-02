@@ -8,7 +8,7 @@ import android.view.View;
 
 import androidx.core.content.ContextCompat;
 
-public class Cell extends BaseCell implements View.OnClickListener {
+public class Cell extends BaseCell implements View.OnClickListener {//define a class for each item of the grid the cell
 
     public Cell(Context context, int position){
 
@@ -29,15 +29,15 @@ public class Cell extends BaseCell implements View.OnClickListener {
     }
 
     @Override
-    protected void onDraw(Canvas canvas){
+    protected void onDraw(Canvas canvas){//each time a value of a cell is update we draw a new image on it
 
         super.onDraw(canvas);
 
         drawButton(canvas);
 
 
-        Log.e("", String.valueOf(isFlaged));
-        if(isFlaged()){
+
+        if(isFlaged()){//check if we clicked for flag in GameEngine
             drawFlag(canvas);
         }
         else if (isRevealed() && isBomb() && !isClicked()){
@@ -58,37 +58,37 @@ public class Cell extends BaseCell implements View.OnClickListener {
         }
     }
 
-    private void drawBombExploded(Canvas canvas) {
+    private void drawBombExploded(Canvas canvas) {//display the explode bomb
         Drawable drawable = ContextCompat.getDrawable(getContext(),R.drawable.bomb);
         drawable.setBounds(0,0,getWidth(),getHeight());
         drawable.draw(canvas);
     }
 
-    private void drawNormalBomb(Canvas canvas) {
+    private void drawNormalBomb(Canvas canvas) {//display the explode bomb
         Drawable drawable = ContextCompat.getDrawable(getContext(),R.drawable.bomb);
         drawable.setBounds(0,0,getWidth(),getHeight());
         drawable.draw(canvas);
     }
 
-    private void drawFlag(Canvas canvas) {
+    private void drawFlag(Canvas canvas) {//display the explode bomb
         Drawable drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrerjaune);
         drawable.setBounds(0,0,getWidth(),getHeight());
         drawable.draw(canvas);
     }
 
-    private void drawButton(Canvas canvas){
+    private void drawButton(Canvas canvas){//display the basic button
         Drawable drawable = ContextCompat.getDrawable(getContext(),R.drawable.carre);
         drawable.setBounds(0,0,getWidth(),getHeight());
         drawable.draw(canvas);
     }
 
-    private void drawBomb(Canvas canvas){
+    private void drawBomb(Canvas canvas){//display the bomb
         Drawable drawable = ContextCompat.getDrawable(getContext(),R.drawable.carrerjaune);
         drawable.setBounds(0,0,getWidth(),getHeight());
         drawable.draw(canvas);
     }
 
-    private void drawNumber(Canvas canvas){
+    private void drawNumber(Canvas canvas){//display the number after clicking on it
         Drawable drawable = null;
 
         switch(getValue()){
